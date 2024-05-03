@@ -12,6 +12,8 @@ public class PlayerFire : MonoBehaviour
     [SerializeField] private float reloadDelay = 3f;
     private Animator animator;
 
+    public Transform muzzle;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -37,7 +39,7 @@ public class PlayerFire : MonoBehaviour
     {
         isCoroutine = true;
 
-        Debug.Log("ÅÁ");
+        Debug.Log("ï¿½ï¿½");
 
         animator.SetTrigger("Fire");
 
@@ -48,7 +50,7 @@ public class PlayerFire : MonoBehaviour
 
     private void OnReload(InputValue inputValue)
     {
-        Debug.Log("ÀçÀåÀü");
+        Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
         if (!isReloading)
         {
             StartCoroutine(ReloadCoroutine());
@@ -59,7 +61,7 @@ public class PlayerFire : MonoBehaviour
     {
         isReloading = true;
 
-        Debug.Log("Ã¶ÄÀ");
+        Debug.Log("Ã¶ï¿½ï¿½");
 
         animator.SetTrigger("Reload");
 
@@ -67,4 +69,6 @@ public class PlayerFire : MonoBehaviour
 
         isReloading = false;
     }
+
+
 }
